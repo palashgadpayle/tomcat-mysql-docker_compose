@@ -7,7 +7,7 @@ RUN cd /tmp && tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-8.5.85/* /usr/local/tomcat/
 RUN ls /usr/local/tomcat/
 RUN wget https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
-ADD https://tomcat-war-jar-new.s3.amazonaws.com/mysql-connector.jar /usr/local/tomcat/lib
+ADD https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar /usr/local/tomcat/lib
 RUN cp -Rv student.war /usr/local/tomcat/webapps/
 COPY ./data.txt /usr/local/tomcat/ 
 RUN sed '20r /usr/local/tomcat/data.txt' -i /usr/local/tomcat/conf/context.xml 
