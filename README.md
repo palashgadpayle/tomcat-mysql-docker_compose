@@ -1,6 +1,6 @@
 # tomcat-mysql-docker_compose (in this project we use aws rds for mysql)
 
-# for best result create databse when you create aws rds (in advance configrution)
+# no need to get database name in advance configuration
 
 # change some data in db/ and web/ directory --> database name, rds endpoint, username, password.
 
